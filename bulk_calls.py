@@ -1,15 +1,15 @@
 from twilio.rest import Client
 from threading import Thread
 
-# Twilio credentials
-account_sid = 'Add the sid acc'  # Replace with your Twilio Account SID
-auth_token = 'Add token'    # Replace with your Twilio Auth Token
+# Twilio credentials (replace with your actual credentials)
+account_sid = 'your_account_sid'  # Replace with your Twilio Account SID
+auth_token = 'your_auth_token'    # Replace with your Twilio Auth Token
 client = Client(account_sid, auth_token)
 
-# List of phone numbers to call
+# List of phone numbers to call (use placeholders or your real numbers)
 phone_numbers = [
-    '+919442794502',
-    '+918754102493',
+    'your_phone_number_1',  # Replace with actual phone numbers
+    'your_phone_number_2',
     # Add all 60 numbers here
 ]
 
@@ -20,7 +20,7 @@ def make_call(number):
     try:
         call = client.calls.create(
             to=number,
-            from_='+12513135031',  # Replace with your Twilio phone number
+            from_='your_twilio_phone_number',  # Replace with your Twilio phone number
             twiml=f'<Response><Say>{text_message}</Say></Response>'
         )
         print(f"Call initiated to {number} - Call SID: {call.sid}")
@@ -39,4 +39,3 @@ def call_members_simultaneously():
 
 if __name__ == "__main__":
     call_members_simultaneously()
-
