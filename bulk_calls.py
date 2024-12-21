@@ -2,8 +2,8 @@ from twilio.rest import Client
 from threading import Thread
 
 # Twilio credentials
-account_sid = 'AC4241705bddc9eff11fcf1c8663500454'  # Replace with your Twilio Account SID
-auth_token = '32b66d8d91ec5b7955fbdc521fb1e90f'    # Replace with your Twilio Auth Token
+account_sid = 'Add the sid acc'  # Replace with your Twilio Account SID
+auth_token = 'Add token'    # Replace with your Twilio Auth Token
 client = Client(account_sid, auth_token)
 
 # List of phone numbers to call
